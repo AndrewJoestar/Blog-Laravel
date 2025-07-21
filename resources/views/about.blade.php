@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{{-- {{ dd($header) }} --}}
+<x-layout>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>about
-    </title>
-</head>
-
-<body>
-    about page content goes here
-</body>
-
-</html>
+    <x-slot:title>{{ $title }}</x-slot:title>
+    <x-slot:header>{{ $header }}</x-slot:header>
+    <h3>THE ABOUT</h3>
+</x-layout>

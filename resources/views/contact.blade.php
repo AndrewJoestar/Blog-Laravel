@@ -1,27 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-layout>
+    <x-slot:title>{{ $title }}</x-slot:title>
+    <x-slot:header>{{ $header }}</x-slot:header>
+    <h1>About Me</h1>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kontak</title>
-</head>
+    <p>
+        This is the about page where you can learn more about me and my blog.
+    </p>
 
-<body>
-    <h1>
-        Halaman Kontak
-    </h1>
-
-    <ul>
-        <li>
-            <a href=""> Sosmed 1</a>
-        </li>
-        <li>
-            <a href=""> Sosmed 2</a>
-        </li>
-    </ul>
-
-</body>
-
-</html>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+    </p>
+</x-layout>
