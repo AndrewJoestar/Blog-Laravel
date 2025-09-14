@@ -7,7 +7,8 @@
         <h2 class="mb-1 text-3-xl tracking-tight text-gray-900 font-bold">{{ $post['title'] }}</h2>
 
         <div class="text-base text-gray-600">
-            <a href="#">{{ $post['author'] }}</a> | Tanggal Publish: 1 Januari 2025
+            <a href="#">{{ $post['author'] }}</a> | Tanggal Publish: 1 Januari 2025 | Genre: <a
+                href="#">{{ $post->genre->name }}</a>
         </div>
         <p class="my-4 font-light">{{ $post['body'] }}</p>
         <a href="/posts" class="font-medium text-blue-600 hover:text-blue-500">Back To Blog

@@ -2,10 +2,18 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Arr;
 
 class Post extends Model
 {
-    protected $fillable = ['title', 'slug', 'author', 'body'];
+    use HasFactory;
+    protected $fillable = ['title', 'genre_id', 'slug', 'author', 'body'];
+
+    public function genre(): BelongsTo
+    {
+        return $this->belongsTo(Genre::class);
+    }
 }
