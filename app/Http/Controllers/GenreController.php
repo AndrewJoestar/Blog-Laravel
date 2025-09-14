@@ -13,7 +13,13 @@ class GenreController extends Controller
      */
     public function index()
     {
-        //
+        $data = Genre::all();
+
+        return view('pages.categories', [
+            'title' => 'Categories',
+            'header' => 'Categories',
+            'genres' => $data
+        ]);
     }
 
     /**

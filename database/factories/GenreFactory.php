@@ -18,6 +18,7 @@ class GenreFactory extends Factory
     {
         return [
             'name' => $this->faker->colorName(),
+            'description' => $this->faker->sentence(),
         ];
     }
 }

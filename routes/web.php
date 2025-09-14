@@ -1,6 +1,8 @@
 <?php
 
 // use Post;
+
+use App\Http\Controllers\GenreController;
 use App\Models\Post;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
@@ -35,9 +37,7 @@ Route::get('/contact', function () {
 });
 
 
-Route::get('/categories', function () {
-    return view('pages.categories', [
-        'title' => 'Categories',
-        'header' => 'Categories',
-    ]);
-});
+Route::get('/categories', [
+    GenreController::class,
+    'index'
+]);
