@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('home', ['title' => 'Welcome to My Blog', 'header' => 'Home']);
+    return view('pages.home', ['title' => 'Welcome to My Blog', 'header' => 'Home']);
 });
 
 Route::get('/about', function () {
-    return view('about', ['title' => 'About Me', 'header' => 'About']);
+    return view('pages.about', ['title' => 'About Me', 'header' => 'About']);
 });
 Route::get('/posts', function () {
-    return view('posts', ['title' => 'Blog', 'header' => 'Blog', 'posts' => Post::all()]);
+    return view('pages.posts', ['title' => 'Blog', 'header' => 'Blog', 'posts' => Post::all()]);
 });
 
 Route::get('/posts/{post:slug}',  function (Post $post) {
@@ -31,5 +31,13 @@ Route::get('/posts/{post:slug}',  function (Post $post) {
 });
 
 Route::get('/contact', function () {
-    return view('contact', ['title' => 'Contact', 'header' => 'Contact']);
+    return view('pages.contact', ['title' => 'Contact', 'header' => 'Contact']);
+});
+
+
+Route::get('/categories', function () {
+    return view('pages.categories', [
+        'title' => 'Categories',
+        'header' => 'Categories',
+    ]);
 });
