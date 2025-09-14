@@ -9,6 +9,9 @@
         </div>
     @endforeach
 
+    <div class="bg-[url(/img/mountains.jpg)] bg-local ...">
+        as
+    </div>
 
     {{-- Hapus nanti --}}
     <div class="grid grid-cols-3 gap-6 p-6">
@@ -16,7 +19,7 @@
         <div class="relative group rounded-2xl overflow-hidden shadow-lg h-48 flex items-center justify-center">
             <!-- Background image -->
             <div
-                class="absolute inset-0 bg-[url('https://unsplash.com/photos/blurry-cityscape-with-red-light-and-street-lights-at-night-oKyZoJy03ZA')] bg-cover bg-center opacity-40 group-hover:opacity-0 transition duration-500">
+                class="absolute inset-0 bg-[url('https://plus.unsplash.com/premium_photo-1661817214148-2d4cf768a7c3?q=80&w=996&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-100 group-hover:opacity-0 transition duration-500">
             </div>
 
             <!-- Solid background muncul saat hover -->
@@ -27,6 +30,8 @@
                 Technology
             </h2>
         </div>
+
+
 
         <!-- Card lain -->
         <div class="relative group rounded-2xl overflow-hidden shadow-lg h-48 flex items-center justify-center">
