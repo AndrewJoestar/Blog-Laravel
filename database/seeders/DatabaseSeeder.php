@@ -21,7 +21,12 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        Genre::factory()->count(5)->create();
+        // Genre::factory()->create();
+
+        $this->call([
+            GenreSeeder::class,
+        ]);
+
         Post::factory()->count(3)->create();
     }
 }
