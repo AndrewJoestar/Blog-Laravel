@@ -44,10 +44,7 @@ class GenreController extends Controller
      */
     public function show(Genre $genre)
     {
-        // Cari genre by slug
         $genre = Genre::where('slug', $genre->slug)->firstOrFail();
-
-        // Ambil semua post dengan genre_id yang sama
         $posts = Post::where('genre_id', $genre->id)->get();
 
         return view('pages.posts', [
