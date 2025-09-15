@@ -24,7 +24,7 @@ Route::get('/posts/{post:slug}',  function (Post $post) {
     // $post = Post::find($post);
     // dd($post);
 
-    return view('post', [
+    return view('pages.post', [
         'title' => 'Single Post',
         'header' => 'Single Post',
         'post' => $post,
@@ -40,4 +40,10 @@ Route::get('/contact', function () {
 Route::get('/categories', [
     GenreController::class,
     'index'
+]);
+
+
+Route::get('/categories/{genre:slug}', [
+    GenreController::class,
+    'show'
 ]);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Genre;
 use App\Http\Requests\StoreGenreRequest;
 use App\Http\Requests\UpdateGenreRequest;
+use App\Models\Post;
 
 class GenreController extends Controller
 {
@@ -43,8 +44,19 @@ class GenreController extends Controller
      */
     public function show(Genre $genre)
     {
-        //
+        // Cari genre by slug
+        $genre = Genre::where('slug', $genre->slug)->firstOrFail();
+
+        // Ambil semua post dengan genre_id yang sama
+        $posts = Post::where('genre_id', $genre->id)->get();
+
+        return view('pages.posts', [
+            'title'  => "Posts by Genre : $genre->name",
+            'header' => "Posts by Genre : $genre->name",
+            'posts'  => $posts,
+        ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
