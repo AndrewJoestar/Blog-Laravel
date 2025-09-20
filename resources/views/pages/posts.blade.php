@@ -16,4 +16,5 @@
                 &raquo;</a>
         </article>
     @endforeach
+    {{ $posts->links() }}
 </x-layout>

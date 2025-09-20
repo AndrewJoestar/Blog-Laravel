@@ -3,6 +3,7 @@
 // use Post;
 
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\PostController;
 use App\Models\Post;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
@@ -16,9 +17,7 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('pages.about', ['title' => 'About Me', 'header' => 'About']);
 });
-Route::get('/posts', function () {
-    return view('pages.posts', ['title' => 'Blog', 'header' => 'Blog', 'posts' => Post::all()]);
-});
+Route::get('/posts', [PostController::class, 'posts']);
 
 Route::get('/posts/{post:slug}',  function (Post $post) {
     // $post = Post::find($post);

@@ -27,6 +27,6 @@ class DatabaseSeeder extends Seeder
             GenreSeeder::class,
         ]);
 
-        Post::factory()->count(3)->create();
+        Post::factory()->count(10)->create();
     }
 }

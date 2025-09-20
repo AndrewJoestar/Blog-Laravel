@@ -18,7 +18,7 @@ class PostFactory extends Factory
     {
         return [
             //
-            'genre_id' => $this->faker->numberBetween(1, 3),
+            'genre_id' => $this->faker->numberBetween(1, 6),
             'title' => $this->faker->words(3, true),
             'author' => $this->faker->name(),
             'slug' => $this->faker->unique()->slug(),
